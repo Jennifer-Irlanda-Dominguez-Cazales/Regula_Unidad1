@@ -40,18 +40,18 @@ public class Regula_U1 {
        System.out.println("\n------El contenido de la lista es: ------\n"+lista);
        boolean a=true;
        do{
-           System.out.println("Deseas agregar mas elementos?"
+           System.out.println("\n-----Deseas agregar mas elementos?-----"
                    + "\n1 para si"
                    + "\n0 para no");
            int opc=leer.nextInt();
            if (opc==1) {
-               System.out.println("Ingresa el nuevo elemento");
+               System.out.println("\n--Ingresa el nuevo elemento--");
                lista.add(leer.next());
            }else{
                a=false;
            }
            
        }while(a);
-       System.out.println("La lista final es:\n"+lista);  
+       System.out.println("\n--La lista final es:--\n"+lista);  
    } 
 }
