@@ -1,0 +1,57 @@
+package regula_u1;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * @author Dominguez Cazales Jennifer
+ */
+public class Regula_U1 {
+   public static void main(String[] args) {
+        Ingresar_Ar();         
+    }
+       Scanner leer = new Scanner(System.in);
+    List <String>lista = new ArrayList<String>();
+    public static void Ingresar_Ar() {
+        Scanner leer = new Scanner(System.in);
+        int can;
+        System.out.println("De cuantos datos deseas el arreglo?");
+        can=leer.nextInt();
+         String[ ]   arr = new  String[can];
+        for (int i = 0; i < can; i++) {
+            System.out.println("Ingresa el valor: "+(i+1));
+            arr[i]=leer.next();
+        }
+        System.out.println("\n-----Datos del arreglo-----");
+        for (int i = 0; i < can; i++) {
+            System.out.print(arr[i]+"\t");
+        }
+        System.out.println("\n\n---Se convertira de Arreglo a Lista y se podran agregar mas elementos---");
+        ArrList(arr);
+    }
+   public static void ArrList(String[ ]   arr){
+       Scanner leer = new Scanner(System.in);
+       List <String>lista = new ArrayList<String>();
+       int tam=arr.length;
+       for (int i = 0; i < tam; i++) {
+           lista.add(arr[i]);
+       }
+       System.out.println("\n------El contenido de la lista es: ------\n"+lista);
+       boolean a=true;
+       do{
+           System.out.println("Deseas agregar mas elementos?"
+                   + "\n1 para si"
+                   + "\n0 para no");
+           int opc=leer.nextInt();
+           if (opc==1) {
+               System.out.println("Ingresa el nuevo elemento");
+               lista.add(leer.next());
+           }else{
+               a=false;
+           }
+           
+       }while(a);
+       System.out.println("La lista final es:\n"+lista);  
+   } 
+}
